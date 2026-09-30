@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Variables</title>
+</head>
+
+<body>
+  <script>
+
+    // 1] 'let' - CREATES A VARIABLE(CHANGEABLE)
+    let variable1 = 8;
+    console.log(variable1);
+
+    const calculation = 2 + 2;
+    console.log(calculation);
+    console.log(calculation + 2);
+
+    const result = calculation + 2;
+    console.log(result);
+
+    const message = 'hello';
+    console.log(message); console.log(';');
+
+    //CHANGING variable1 value
+    variable1 = 9;
+    console.log(variable1);
+
+    variable1 = variable1 + 1;
+    console.log(variable1);
+
+    // 2] 'const' - CREATES A VARIABLE THAT CAN'T BE CHANGED LATER
+
+    const variable2 = 3; //use 'const' by default, good practice, rather safer choice or else 'let'
+
+    // variable2 = 5; ERROR, CANNOT CHANGE 'const' i.e. constant variable
+
+
+    // 3] 'var' - CREATES A VARIABLE JUST LIKE 'let' THAT CAN BE CHANGED LATER
+  
+    //var means variable
+
+    //original way to create variables in JS but it has some issues
+    var variable3 = 7;
+
+    console.log(typeof 2);
+    console.log(typeof variable2);
+    console.log(typeof message);
+    //we can use 'typeof' to check the type of the value saved inside a variable
+  </script>
+</body>
+
+</html>
