@@ -7,6 +7,8 @@
 
 <body>
   <script>
+
+    /*
     console.log(typeof 'true'); // not used in quotes or considered as STRING
     console.log(typeof true); //BOOLEAN
     false
@@ -35,7 +37,108 @@
     } else {
       console.log('You can not drive.');
     }
+    */
 
+
+
+
+    /*
+    //Logical AND operator checks if 2 boolean values are true (&&)
+    console.log(true && false); //false
+    console.log(0.2 >= 0 && 0.2 < 1 / 3); //true
+
+    //OR checks if one side is true (||)
+    console.log(true || false); //true
+
+    //NOT operator (!)
+    console.log(!true); //false
+    console.log(!false);  //true
+    */
+
+
+
+
+    /*
+    // TRUTHY(any value that is not in the falsy list) AND FALSY(false, 0, '', Nan, undefined, null) VALUES
+    if (0) {
+      console.log('truthy');
+    }
+
+    const cartQuantity = 5;
+
+    if (cartQuantity) {
+      console.log('cart has products');
+    }
+
+    console.log(!0);
+
+    console.log('text' / 5);    //Nan - Not a Number
+
+    let variable1;    //this syntax is only possible with 'let'. for const, const variable1 = undefined;
+    console.log(variable1);     //undefined
+    */
+
+
+
+
+    // TERNARY OPERATOR (?:) : similar to if-else statement
+    const result = 1 ? 'truthy' : 'falsy';
+    console.log(result);            // truthy, wouldve been falsy if result = 0(falsy value) LOLLLLLLLLL
+
+    /*above is a shortcut to below code
+      if (true) {                 
+        'truthy'
+      } else {
+        'falsy'
+      }
+
+      //THIS OPERATOR IS A SHORTCUT TO A CODE LIKE BELOW
+
+      let result;
+
+      if (condition) {
+        result = 'truthy';
+      } else {
+        result = 'falsy'; 
+      }
+    */
+
+    //GUARD operator (&&)
+    false && console.log('hello');    //this does not run the code on the right, i.e. hello is not printed on the console as the left side is 'falsy' so the && operator stops early or short circuits
+    //thus we can use the value on the left to block or guard the code on the right.
+
+    /*above is shortcut for code like below
+
+    if (condition) {
+    console.log('hello');
+    }
+    */
+
+    //we can save this to a variable
+    const message = 2 && 'hello';
+    console.log(message);
+    /*shortcut for if statement like below    SIMPLIFIED VERSION OF ABOVE GUARD operator
+    let message;
+
+    if (condition) {
+      message = 'hello';
+    }
+    */
+
+    //DEFAULT OPERATOR (||)
+    const currency = 'EUR'|| 'USD';
+    console.log(currency);            // EUR
+
+    //const currency = undefined || 'USD';
+    //console.log(currency);            // USD
+
+    /*shortcut for an if statement like below
+    let currency;
+
+    if (!condition) {
+      currency = 'USD';
+    }
+    */
   </script>
 </body>
 
