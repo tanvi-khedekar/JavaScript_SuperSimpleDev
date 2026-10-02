@@ -16,18 +16,7 @@
   -->
 
   <button onclick="
-    const randomNumber = Math.random(); // 0 <= number < 1
-    let computerMove = '';      // SCOPE concept // 'var' does not follow the rules of scope
-
-    if (randomNumber >= 0 && randomNumber < 1/3 ) {
-      computerMove = 'rock';
-    } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-      computerMove = 'paper';
-    } else if (randomNumber >= 2/3 && randomNumber < 1) {
-      computerMove = 'scissors';
-      // var randomNumber = 0.5     //var doesnt follow rules of scope, this one will conflict with the one created above
-    }
-    // console.log(computerMove);   //used for testing
+    const computerMove = pickComputerMove();
 
     let result = '';
 
@@ -43,7 +32,7 @@
   ">Rock</button>
 
   <button onclick="
-    pickComputerMove();
+    const computerMove = pickComputerMove();
 
     let result = '';
 
@@ -59,7 +48,9 @@
   ">Paper</button>
 
   <button onclick="
-    c
+
+    const computerMove = pickComputerMove();
+    
     let result = '';
 
     if (computerMove === 'rock') {
@@ -74,9 +65,11 @@
   ">Scissors</button>
 
   <script>  //the code in the script element runs when the page is loaded.
+
     function pickComputerMove() {
       const randomNumber = Math.random(); // 0 <= number < 1
-      const computerMove = '';      // SCOPE concept // 'var' does not follow the rules of scope
+
+      let computerMove = '';      // LOCAL VARIABLE, if it were out of the function block it wouldve been a GLOBAL VARIABLE
 
       if (randomNumber >= 0 && randomNumber < 1/3 ) {
         computerMove = 'rock';
@@ -86,6 +79,10 @@
         computerMove = 'scissors';
         // var randomNumber = 0.5     //var doesnt follow rules of scope, this one will conflict with the one created above
       }
+
+      // RETURN - gives a value out of a function
+      return computerMove;    //returning a variable is preferred over a global variable; here, the scope can help us prevent naming conflicts.
+      //console.log('after');     //this wont run because after 'return' the code returns back to where the function was called
     }
   </script>
 </body>
