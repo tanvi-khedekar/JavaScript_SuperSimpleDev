@@ -18,11 +18,11 @@
     */
 
     // PARAMETERS - lets us put a value inside a function
-    function calculateTax(cost) {     //this function takes a value
-      console.log(cost * 0.1);
+    function calculateTax(cost, taxPercent = 0.1) {     //this function takes a value
+      console.log(cost * taxPercent);
     }
 
-    calculateTax(4000);     // passing a value into the function
+    calculateTax(4000, 0.2);     // passing a value into the function
     calculateTax(2000);     // passing a value into the function
   </script>
 </body>
