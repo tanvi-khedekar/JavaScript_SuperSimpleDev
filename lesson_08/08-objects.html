@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Objects</title> <!--an object groups multiple values together-->
+</head>
+
+<body>
+  <script>
+    const product = {
+      name: 'socks',        <!--'name'(value on left side) is called the property and 'socks'(value on the right side) is called the value-->
+      price: 1090           <!--property-value pair-->
+    };
+    console.log(product);
+    console.log(product.name);  <!--.name will access the value that is associated with the name property, socks-->
+    <!--this syntax is called 'dot notation'-->
+    console.log(product.price);       <!--1090-->
+
+    product.name = 'cotton socks'   <!--changed the original value-->
+    console.log(product);
+
+    product.newProperty = true;     <!--added new property to the object-->
+    console.log(product);
+
+    delete product.newProperty;       <!--delete an existing property(property-value pair)-->
+    console.log(product);
+
+    <!--object is just another type of value-->
+    console.log(typeof product);        <!--object-->
+
+  </script>
+</body>
+
+</html>
