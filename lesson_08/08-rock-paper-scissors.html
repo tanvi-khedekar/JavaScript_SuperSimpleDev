@@ -27,7 +27,19 @@
     playGame('scissors');
   ">Scissors</button>
 
+  <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+  ">Reset Score</button>
+
   <script>  //the code in the script element runs when the page is loaded.
+
+    const score = {               // we could create separare variables, but we're creating an object for convenience
+      wins: 0,
+      losses: 0,
+      ties: 0
+    };                              //we've created this object OUTSIDE the function, in order to save the score from last time. if it was inside the function, the fuction would create a new score every time; which is not what we want.
 
     function playGame(playerMove) {
       const computerMove = pickComputerMove();
@@ -62,7 +74,16 @@
           }
       }
 
-      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+      if (result === 'You win.'){
+        score.wins += 1;
+      } else if (result === 'You lose.') {
+        score.losses += 1;
+      } else if (result === 'Tie.') {
+        score.ties += 1;
+      }
+
+      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
     }
 
     function pickComputerMove() {

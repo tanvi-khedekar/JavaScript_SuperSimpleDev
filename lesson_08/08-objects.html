@@ -10,26 +10,55 @@
 
 <body>
   <script>
+    /*
     const product = {
       name: 'socks',        <!--'name'(value on left side) is called the property and 'socks'(value on the right side) is called the value-->
       price: 1090           <!--property-value pair-->
     };
     console.log(product);
     console.log(product.name);  <!--.name will access the value that is associated with the name property, socks-->
-    <!--this syntax is called 'dot notation'-->
-    console.log(product.price);       <!--1090-->
+    //this syntax is called 'dot notation'
+    console.log(product.price);       //1090
 
-    product.name = 'cotton socks'   <!--changed the original value-->
+    product.name = 'cotton socks'   //changed the original value
     console.log(product);
 
-    product.newProperty = true;     <!--added new property to the object-->
+    product.newProperty = true;     //added new property to the object
     console.log(product);
 
-    delete product.newProperty;       <!--delete an existing property(property-value pair)-->
+    delete product.newProperty;       //delete an existing property(property-value pair)
     console.log(product);
 
-    <!--object is just another type of value-->
-    console.log(typeof product);        <!--object-->
+    //object is just another type of value
+    console.log(typeof product);        //object
+    */
+    
+    const product2 = {          
+      name: 'shirt',
+      'delivery-time': '1 day',            // property can be defined with or w/o brackets[]
+      rating: {                             // we can any type of value inside an object -> numbers, strings, booleans, as we as other objects(as it is also a type of value)
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1 () {              // we can also add function inside an object because, function is also another type of value
+        console.log('function inside object')         // this(function inside an object is actually called a method i.e. function inside an object=method, eg. console(object), log(function))
+      }
+
+    };
+    console.log(product2);
+    console.log(product2.name);           // dot notation
+    console.log(product2['name']);         // bracket notation(lets us use properties that don't work with dot notation)
+    //console.log(product.delivery-time);     // dot notation condsiders the '-' as a minus sign; thus,
+    console.log(product2['delivery-time']);     // undefined, as of now, but it atleast considers it as a value, when added to object it shows it value i.e. '1 day'.
+    console.log(product2.rating.count);         // 87
+
+    product2.fun();                                   // function inside object
+
+    console.log(typeof console);      // object
+    console.log(typeof console.log);    // function, and thus we access 'log' function through dot notation from inside the 'console' object -> thus the 'console.log' is called a method(function inside an object)
+    // another example, Math.random (math->object & random->function inside object => method)
+
+        
 
   </script>
 </body>
