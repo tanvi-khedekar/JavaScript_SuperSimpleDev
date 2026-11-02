@@ -1,0 +1,4 @@
+Strategy for JavaScript:
+
+1. Think about what steps we need(algorithm)
+2. Convert those steps into code
