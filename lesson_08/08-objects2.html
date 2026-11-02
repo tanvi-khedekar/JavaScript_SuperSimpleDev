@@ -9,14 +9,22 @@
   <script>
     const product = {
       name: 'socks',        <!--name is the property, in front of it is the value associated with it-->
-      price: 1090
+      price: 1090           <!-- propert-value pair -->
     };
     console.log(product);
-    console.log(product.name);
-    console.log(product.price);
+    console.log(product.name);      <!--accessing value using the property-->
+    console.log(product.price);         <!--dot notation-->
     
     product.name = 'cotton socks';      <!--value associated with name was changed to cotton socks-->
     console.log(product);
+
+    product.newProperty = true;         <!--adding new values-->
+    console.log(product);
+
+    delete product.newProperty;       <!--deleting a property-value pair-->
+    console.log(product);
+
+    <!--  WHY DO WE USE OBJECTS?  -->
 
   </script>
 </body>
